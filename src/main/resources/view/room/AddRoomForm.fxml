@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="390.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hms.controller.room.AddRoomFormController">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="700.0" layoutY="-4.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/room_add.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="386.0" layoutX="14.0" opacity="0.49" stroke="WHITE" strokeType="INSIDE" width="377.0" />
+      <VBox alignment="CENTER" layoutX="17.0" layoutY="27.0" spacing="15.0">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="ROOM TYPE ID :">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtRoomTypeId" onAction="#txtRoomTypeIdOnAction" onKeyReleased="#txtKeyReleased" promptText="Ex. RM-1234" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+               <children>
+                  <Label text="TYPE :">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="cmbType" focusTraversable="false" onAction="#cmbTypeOnAction" prefHeight="25.0" prefWidth="371.0" promptText="Type" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="87.0" spacing="10.0">
+               <children>
+                  <Label text="KEY MONEY :">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtKeyMoney" focusTraversable="false" onAction="#txtKeyMoneyOnAction" onKeyReleased="#txtKeyReleased" promptText="Ex. 1200.00" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="164.0" spacing="10.0">
+               <children>
+                  <Label text="QUANTITY :">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtQty" focusTraversable="false" onAction="#txtQtyOnAction" onKeyReleased="#txtKeyReleased" promptText="Ex. 10" />
+               </children>
+            </VBox>
+            <JFXButton fx:id="btnAdd" onAction="#btnAddOnAction" prefWidth="120.0" style="-fx-background-color: #00b894;" text="ADD" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="462.0" layoutY="31.0" opacity="0.49" stroke="WHITE" strokeType="INSIDE" width="200.0" />
+      <AnchorPane layoutX="473.0" layoutY="31.0" prefHeight="138.0" prefWidth="143.0">
+         <children>
+            <ImageView fitHeight="139.0" fitWidth="134.0" layoutX="18.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="8.0">
+               <image>
+                  <Image url="@../../assets/images.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="7.0" layoutY="111.0" prefHeight="97.0" prefWidth="155.0" text="New Room +">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

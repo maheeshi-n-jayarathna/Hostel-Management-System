@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hms.controller.student.AddStudentFormController">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="700.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/add_student.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="410.0" layoutX="7.0" layoutY="13.0" opacity="0.49" stroke="WHITE" strokeType="INSIDE" width="393.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="475.0" layoutY="36.0" opacity="0.49" stroke="WHITE" strokeType="INSIDE" width="200.0" />
+      <VBox layoutX="14.0" layoutY="25.0" prefHeight="359.0" prefWidth="365.0" spacing="15.0">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="STUDENT ID :">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtId" onAction="#txtIdOnAction" onKeyReleased="#txtKeyReleased" promptText="Ex. S0001" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+               <children>
+                  <Label text="NAME :">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtName" focusTraversable="false" onAction="#txtNameOnAction" onKeyReleased="#txtKeyReleased" promptText="Ex. Maheeshi" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="87.0" spacing="10.0">
+               <children>
+                  <Label text="ADDRESS :">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtAddress" focusTraversable="false" onAction="#txtAddressOnAction" onKeyReleased="#txtKeyReleased" promptText="Ex. Kegalle" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="164.0" spacing="10.0">
+               <children>
+                  <Label text="CONTACT NO :">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtContact" focusTraversable="false" onAction="#txtContactOnAction" onKeyReleased="#txtKeyReleased" promptText="Ex. 0704042310" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="241.0" spacing="10.0">
+               <children>
+                  <Label text="DOB :">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtDOB" focusTraversable="false" onAction="#txtDOBOnAction" onKeyReleased="#txtKeyReleased" prefWidth="371.0" promptText="Ex. 2000-04-29" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="318.0" spacing="10.0">
+               <children>
+                  <Label text="GENDER :" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="cmbGender" focusTraversable="false" onAction="#cmbGenderOnAction" prefHeight="25.0" prefWidth="371.0" promptText="Select" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="479.0" layoutY="46.0" prefHeight="138.0" prefWidth="143.0">
+         <children>
+            <ImageView fitHeight="139.0" fitWidth="134.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="19.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../assets/add_st_icon.jpg" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="7.0" layoutY="111.0" prefHeight="97.0" prefWidth="155.0" text="New Student+">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnRegister" layoutX="501.0" layoutY="321.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" prefHeight="49.0" style="-fx-background-color: #00b894;" text="REGISTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
